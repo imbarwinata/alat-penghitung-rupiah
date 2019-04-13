@@ -10,7 +10,7 @@ let value = 0;
 let costLeft = 0;
 let costReturn = {};
 
-class App extends React.Component {
+export class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -75,25 +75,29 @@ class App extends React.Component {
     const { input, inputLabel } = this.state;
 
     return (
-      <React.Fragment>
-        <React.Suspense fallback={<div>Memuat Data Form...</div>}>
-          <FormComponent
-            {...this.state}
-            input={input}
-            handleCalculate={this.handleCalculate}
-            handleChangeInput={this.handleChangeInput}
-            handleEnter={this.handleEnter}
-          />
-        </React.Suspense>
-        <React.Suspense fallback={<div>Memuat Data Item...</div>}>
-          <ItemComponent
-            input={inputLabel}
-            costReturn={costReturn}
-            costLeft={costLeft}
-            decimals={decimals}
-          />
-        </React.Suspense>
-      </React.Fragment>
+      <div data-test="component-app">
+        <React.Fragment>
+          <React.Suspense fallback={<div>Memuat Data Form...</div>}>
+            <FormComponent
+              data-test="component-form"
+              {...this.state}
+              input={input}
+              handleCalculate={this.handleCalculate}
+              handleChangeInput={this.handleChangeInput}
+              handleEnter={this.handleEnter}
+            />
+          </React.Suspense>
+          <React.Suspense fallback={<div>Memuat Data Item...</div>}>
+            <ItemComponent
+              data-test="component-item"
+              input={inputLabel}
+              costReturn={costReturn}
+              costLeft={costLeft}
+              decimals={decimals}
+            />
+          </React.Suspense>
+        </React.Fragment>
+      </div>
     );
   }
 }
