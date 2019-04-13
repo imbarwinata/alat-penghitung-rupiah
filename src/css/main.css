@@ -1,22 +1,117 @@
-@import "bootstrap-grid.css";
-
 :root {
-    --color-primary: #42b549;
-    --color-secondary: #84CB66;
-    --color-tertiary: #909090;
-    --color-soft: #bfbfbf54;
-    --color-background: #fff;
-    --width-xs: 414px;
+  --color-primary: #42b549;
+  --color-secondary: #84cb66;
+  --color-tertiary: #909090;
+  --color-soft: #bfbfbf54;
+  --color-font-primary: #494949;
+  --color-background: #e6eaed;
+  --color-background-item: #fff;
+  --width-xs: 414px;
 }
 
-*{
-    margin: 0;
+* {
+  margin: 0;
+}
+
+.header {
+  background: var(--color-primary);
+  color: var(--color-background-item);
+  font-size: 16px;
+  padding: 10px 21px;
+  text-align: center;
+}
+
+.form {
+  background: var(--color-secondary);
+  height: 120px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--color-tertiary);
+}
+
+.formInput {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--color-background);
+  border: none;
+  height: 40px;
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+.formButton {
+  display: block;
+  margin: 10px auto;
+  background: var(--color-background-item);
+  height: 30px;
+  width: 100px;
+  border-radius: 3px;
+  border: none;
+  color: var(--color-primary);
+}
+
+.formButton:hover {
+  cursor: pointer;
 }
 
 .my-container {
-    background: var(--color-background);
-    width: var(--width-xs);
-    height: 100%;
-    margin: 0 auto;
-    border: 1px solid var(--color-soft);
+  background: var(--color-background);
+  width: var(--width-xs);
+  max-width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid var(--color-soft);
+  overflow: hidden;
+}
+
+.costInput,
+.costLeft {
+  color: var(--color-font-primary);
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.item {
+  background: var(--color-background-item);
+  margin: 10px auto !important;
+  width: var(--width-xs) - 150px;
+  max-width: 90%;
+  height: 40px;
+  border: 1px solid var(--color-soft);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px #777;
+  -moz-box-shadow: 0 2px 1px #777;
+  box-shadow: 0 2px 1px #777;
+  transform: translateY(0);
+  transition: 0.3s;
+}
+
+.item:hover {
+  transition: 0.3s;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.total,
+.margin,
+.nominal {
+  display: inline-block;
+}
+
+.total {
+  color: var(--color-primary);
+  padding-top: 10px;
+  width: 60px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.nominal {
+  color: var(--color-font-primary);
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 200px !important;
 }

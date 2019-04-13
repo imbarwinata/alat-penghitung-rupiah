@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "start:prod": "node server",
+    "start:production": "npm run build && npm run start:prod",
     "build": "cross-env NODE_ENV=production webpack",
     "format": "prettier --write 'packages/**/*.js'",
-    "test": "jest --watchAll --coverage",
+    "test": "jest --watchAll",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,css,md}": [
+    "*.{js,jsx,md}": [
       "prettier --write --single-quote",
       "eslint --fix",
       "git add"
