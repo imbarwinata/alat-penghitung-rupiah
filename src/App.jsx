@@ -10,7 +10,7 @@ let value = 0;
 let costLeft = 0;
 let costReturn = {};
 
-export class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -102,4 +102,5 @@ export class App extends React.Component {
   }
 }
 
+export const AppComponent = App;
 export default hot(module)(withDefaultLayout(App));

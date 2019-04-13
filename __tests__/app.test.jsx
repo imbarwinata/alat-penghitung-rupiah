@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import App, { App as AppComponent } from '../src/App';
+import App, { AppComponent } from '../src/App';
 
 const setup = (props = {}, state = null) => {
   let wrapper = shallow(<App {...props} />);
