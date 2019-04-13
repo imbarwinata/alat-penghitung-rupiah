@@ -1,4 +1,4 @@
-## Webpack react minimal boilerplate
+## Aplikasi Alat Penghitung Nominal Rupiah
 
 Aplikasi Alat Penghitung Nominal Rupiah
 
