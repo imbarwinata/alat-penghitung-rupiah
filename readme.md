@@ -1,6 +1,6 @@
 ## Aplikasi Alat Penghitung Nominal Rupiah
 
-Aplikasi Alat Penghitung Nominal Rupiah
+Aplikasi Alat Penghitung Nominal Rupiah, Enjoy Coding :)
 
 ### Table of contents
 
