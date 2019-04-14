@@ -1,0 +1,25 @@
+diff a/__tests__/app.test.jsx b/__tests__/app.test.jsx	(rejected hunks)
+@@ -42 +41,0 @@ describe('Renders Components', () => {
+-  
+@@ -47 +46,4 @@ describe('Set State', () => {
+-    const appComponent = wrapper.find(AppComponent).dive().setState({ input: 12900 });
++    const appComponent = wrapper
++      .find(AppComponent)
++      .dive()
++      .setState({ input: 12900 });
+@@ -57 +59,4 @@ describe('Calculate Nominal Rupiah', () => {
+-    const appComponent = wrapper.find(AppComponent).dive().setState({ input: 12900 });
++    const appComponent = wrapper
++      .find(AppComponent)
++      .dive()
++      .setState({ input: 12900 });
+@@ -61,2 +66,7 @@ describe('Calculate Nominal Rupiah', () => {
+-  
+-    expect(costReturn).toMatchObject({ '100': 4, '500': 1, '1000': 2, '10000': 1 });
++
++    expect(costReturn).toMatchObject({
++      '100': 4,
++      '500': 1,
++      '1000': 2,
++      '10000': 1,
++    });
