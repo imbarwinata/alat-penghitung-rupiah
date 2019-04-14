@@ -22,6 +22,7 @@ class FormComponent extends React.Component {
           className={styles.formInput}
         />
         <button
+          data-test="component-button"
           className={styles.formButton}
           type="button"
           onClick={handleCalculate}

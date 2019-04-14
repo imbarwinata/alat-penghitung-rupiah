@@ -66,7 +66,7 @@ class App extends React.Component {
         this.setState({ inputLabel: input });
       } else {
         this.calculate(input);
-        this.setState({ costReturn, costLeft, inputLabel: input });
+        this.setState({ costReturn, inputLabel: input });
       }
     }
   };
@@ -103,4 +103,8 @@ class App extends React.Component {
 }
 
 export const AppComponent = App;
+export const Data = {
+  costReturn,
+  costLeft,
+};
 export default hot(module)(withDefaultLayout(App));
